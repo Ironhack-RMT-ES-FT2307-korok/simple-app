@@ -23,6 +23,7 @@ const capitalize = require("./utils/capitalize");
 const projectName = "simple-app";
 
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
+// app.locals son variables que serán accesibles en todas las vistas de hbs
 
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
