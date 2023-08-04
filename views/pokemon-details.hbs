@@ -5,9 +5,11 @@
   <div>
     <h4>{{this.pokemon.number}} {{this.pokemon.name}}</h4>
     <img src="{{this.pokemon.url}}" alt="pokemon" height="300px">
-    {{#each this.pokemon.type}}
-      <li>{{this}}</li>
-    {{/each}}
+    <ul>
+      {{#each this.pokemon.type}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
   </div>
 
 </div>

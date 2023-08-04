@@ -16,6 +16,14 @@
          <a href="/pokemon">Ver los pokemon</a>
       </nav>
 
+      <div>
+         {{!-- como action indicamos a donde va a redirijir esta llamada --}}
+         <form action="/pokemon-search">
+            <input type="text" name="pokeName">
+            <button>Buscar</button>
+         </form>
+      </div>
+
       {{{body}}}
 
       <script src="/js/script.js"></script>

@@ -58,4 +58,25 @@ router.get("/pokemon/:pokemonId", (req, res, next) => {
 
 })
 
+// ruta de busqueda
+// cuando el usuario use el formulario de busqueda
+// redirije a esta ruta y nos da los resultados de la busqueda
+router.get("/pokemon-search", (req, res, next) => {
+  console.log(req.query)
+
+  Pokemon.findOne( { name: req.query.pokeName } )
+  .then((foundPokemon) => {
+    console.log(foundPokemon)
+    res.render("search-results.hbs", {
+      foundPokemon: foundPokemon
+    })
+  })
+  .catch((error) => {
+    next(error)
+  })
+
+})
+
+
+
 module.exports = router;

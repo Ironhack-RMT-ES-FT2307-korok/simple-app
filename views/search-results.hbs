@@ -1,0 +1,20 @@
+<div>
+
+  aqui iran los resultados de la busqueda
+
+  {{#if this.foundPokemon}}
+  <div>
+    <h4>{{this.foundPokemon.number}} {{this.foundPokemon.name}}</h4>
+    <img src="{{this.foundPokemon.url}}" alt="pokemon" height="300px">
+    <ul>
+      {{#each this.foundPokemon.type}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  {{else}}
+    <p>lo sentimos, no hay pokemon con ese nombre</p>
+  {{/if}}
+
+
+</div>
